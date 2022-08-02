@@ -1,0 +1,9 @@
+readFileSync: lectura de un archivo den forma sincrona
+writeFileSync: sobreescritura de un archivo de forma sincrona
+appendFileSync: actualizacion o agrega texto a un archivo en forma sincrona
+unlinkSync: borrado de un archivo de forma sincrona
+mkdirSync: creacion de una carpeta.
+
+ej.
+
+const data = fs.readFileSync("ruta", "utf-8");

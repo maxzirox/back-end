@@ -16,7 +16,15 @@ class Contenedor{
         }
     }
 
-    
+    async random(){
+        try{
+            const objs = JSON.parse(await fs.readFile(this.ruta, 'utf-8'), null, 2)
+            const aleatorio = objs[Math.floor(Math.random() * objs.length)];
+            return aleatorio;
+        }catch(error){
+            console.log('error: ', error)
+        }
+    }    
 
     async guardar(obj, cb){
         const objs = cb;
@@ -83,4 +91,5 @@ async function main(){
     //await deleteAll();
     
 }
-main();
+
+module.exports = Contenedor;
